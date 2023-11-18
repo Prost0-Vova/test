@@ -10,5 +10,18 @@
       "location": "Another Location",
       "age": 2,
       "sex": "Female"
+    },
+    {
+      "id": 3,
+      "location": "Kyiv",
+      "age": 5,
+      "sex": "Female"
+    },
+    {
+      "id": 4,
+      "location": "Lviv",
+      "age": 1,
+      "sex": "Male"
     }
+    
   ]
