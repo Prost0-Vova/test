@@ -1,32 +1,52 @@
 import styled from '@emotion/styled';
 
 
-export const Container = styled.div`
-background-color: grey;
+export const Container = styled.ul`
 
-height:1000px;
+display: flex;
+flex-wrap: wrap; 
+list-style: none;
+padding: 0;
+justify-content: flex-start; 
+margin-left:0px;
+
 `;
 export const Item = styled.li`
-flex-direction: column;
-margin-top:20px;
-display: flex;
-background-color: white;
 
-margin: 0 5px 0 5px;
+
+display:flex;
+flex-direction:column;
+margin-top:50px;
+flex: 0 0 calc(33.3% - 20px);
+border: 1px solid #ccc; 
+padding: 10px; 
+text-align: center; 
+
+vertical-align: top;
+margin:20px 0px 0px 50px;
 max-width:288px;
-height:100%;
+
 justify-content: center;
-margin:auto;
+
 height:auto;
 background-color:white;
 border-radius:5px;
 border-radius: 0 0 40px 40px;
 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 transition: transform 0.3s ease;
+
 &:hover{
     box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.1);
     
 }
+@media(max-width:768px){
+        max-width:336px;
+        max-height:456px;  
+        margin-left:50px; 
+      }
+      @media(max-width:320px){
+        margin-right:15px; 
+      }
 
 `
 
@@ -46,7 +66,9 @@ export const Image = styled.img`
 max-width:288px;
 height:288px;;
 
-
+@media(min-width:768px){
+  max-width:336px
+}
 
 `;
 export const TextDiv = styled.div`

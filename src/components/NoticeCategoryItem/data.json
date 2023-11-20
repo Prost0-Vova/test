@@ -18,7 +18,37 @@
       "sex": "Female"
     },
     {
-      "id": 4,
+      "id": 6,
+      "location": "Lviv",
+      "age": 1,
+      "sex": "Male"
+    },
+    {
+      "id": 7,
+      "location": "Lviv",
+      "age": 1,
+      "sex": "Male"
+    },
+    {
+      "id": 8,
+      "location": "Lviv",
+      "age": 1,
+      "sex": "Male"
+    },
+    {
+      "id": 9,
+      "location": "Lviv",
+      "age": 1,
+      "sex": "Male"
+    },
+    {
+      "id": 10,
+      "location": "Lviv",
+      "age": 1,
+      "sex": "Male"
+    },
+    {
+      "id": 11,
       "location": "Lviv",
       "age": 1,
       "sex": "Male"

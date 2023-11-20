@@ -15,11 +15,11 @@ return(
 
 }
 
-export const FavoriteIcon = () => {
+export const FavoriteIcon = ({isFavorite}) => {
 
 return(
-    <svg fill="#CCE4FB" stroke="#54ADFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="24">
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M5.775 16.063l10.225 10.603 10.225-10.603c1.137-1.179 1.775-2.777 1.775-4.444 0-3.471-2.714-6.285-6.061-6.285-1.607 0-3.149 0.662-4.286 1.841l-1.653 1.715-1.653-1.715c-1.137-1.179-2.678-1.841-4.286-1.841-3.347 0-6.061 2.814-6.061 6.285 0 1.667 0.639 3.266 1.775 4.444z"></path>
+    <svg fill={ isFavorite ? "#54ADFF" : '#CCE4FB'} stroke="#54ADFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="24">
+<path strokeLinejoin="round" strokeLinecap="round" strokeMiterlimit="4" strokeWidth="2" d="M5.775 16.063l10.225 10.603 10.225-10.603c1.137-1.179 1.775-2.777 1.775-4.444 0-3.471-2.714-6.285-6.061-6.285-1.607 0-3.149 0.662-4.286 1.841l-1.653 1.715-1.653-1.715c-1.137-1.179-2.678-1.841-4.286-1.841-3.347 0-6.061 2.814-6.061 6.285 0 1.667 0.639 3.266 1.775 4.444z"></path>
 </svg>
 
 )
@@ -29,8 +29,8 @@ return(
 export const LocationIcon = () => {
 return(
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 32" width="24" height="24">
-<path fill="none" stroke="#54adff"  stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M27.677 14.667c0 5.891-4.776 10.667-10.667 13.333-5.891-2.667-10.667-7.442-10.667-13.333s4.776-10.667 10.667-10.667c5.891 0 10.667 4.776 10.667 10.667z"></path>
-<path fill="none" stroke="#54adff"  stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M21.010 14.667c0 2.209-1.791 4-4 4s-4-1.791-4-4c0-2.209 1.791-4 4-4s4 1.791 4 4z"></path>
+<path fill="none" stroke="#54adff"  strokeLinejoin="round" strokeLinecap="round" strokeMiterlimit="4" strokeWidth="2" d="M27.677 14.667c0 5.891-4.776 10.667-10.667 13.333-5.891-2.667-10.667-7.442-10.667-13.333s4.776-10.667 10.667-10.667c5.891 0 10.667 4.776 10.667 10.667z"></path>
+<path fill="none" stroke="#54adff"  strokeLinejoin="round" strokeLinecap="round" strokeMiterlimit="4" strokeWidth="2" d="M21.010 14.667c0 2.209-1.791 4-4 4s-4-1.791-4-4c0-2.209 1.791-4 4-4s4 1.791 4 4z"></path>
 </svg>
 )
 
@@ -40,7 +40,7 @@ export const AgeIcon = () => {
 
     return(
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 32" width="24" height="24">
-<path fill="none" stroke="#54adff"  stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M17.010 9.333v6.667l4 4M29.010 16c0 6.627-5.373 12-12 12s-12-5.373-12-12c0-6.627 5.373-12 12-12s12 5.373 12 12z"></path>
+<path fill="none" stroke="#54adff"  strokeLinejoin="round" strokeLinecap="round" strokeMiterlimit="4" strokeWidth="2" d="M17.010 9.333v6.667l4 4M29.010 16c0 6.627-5.373 12-12 12s-12-5.373-12-12c0-6.627 5.373-12 12-12s12 5.373 12 12z"></path>
 </svg>
     )
 }
@@ -48,7 +48,7 @@ export const AgeIcon = () => {
 export const MaleIcon = ()  => {
 return(
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 32" width="24" height="24">
-<path fill="none" stroke="#54adff"  stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M17.010 17.333c3.682 0 6.667-2.985 6.667-6.667s-2.985-6.667-6.667-6.667c-3.682 0-6.667 2.985-6.667 6.667s2.985 6.667 6.667 6.667zM17.010 17.333v10.667M13.010 24h8"></path>
+<path fill="none" stroke="#54adff" strokeLinejoin="round" strokeLinecap="round" strokeMiterlimit="4" strokeWidth="2" d="M17.010 14.667c-3.682 0-6.667 2.985-6.667 6.667s2.985 6.667 6.667 6.667c3.682 0 6.667-2.985 6.667-6.667s-2.985-6.667-6.667-6.667zM17.010 14.667v-10.667M17.010 4l5.333 5.333M17.010 4l-5.333 5.333"></path>
 </svg>
 )
     
@@ -57,7 +57,7 @@ return(
 export const FemaleIcon = ()  => {
     return(
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 32" width="24" height="24">
-   <path fill="none" stroke="#54adff"  stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M17.010 17.333c3.682 0 6.667-2.985 6.667-6.667s-2.985-6.667-6.667-6.667c-3.682 0-6.667 2.985-6.667 6.667s2.985 6.667 6.667 6.667zM17.010 17.333v10.667M13.010 24h8"></path>
+   <path fill="none" stroke="#54adff"  strokeLinejoin="round" strokeLinecap="round" strokeMiterlimit="4" strokeWidth="2" d="M17.010 17.333c3.682 0 6.667-2.985 6.667-6.667s-2.985-6.667-6.667-6.667c-3.682 0-6.667 2.985-6.667 6.667s2.985 6.667 6.667 6.667zM17.010 17.333v10.667M13.010 24h8"></path>
     </svg>
     )
         

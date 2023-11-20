@@ -16,7 +16,7 @@ import {
   InfoAge,
   InfoPol,
 } from './NoticeCategoryItem.js';
-import myImg from '../../images/cat.png';
+import myImg from './images/cat.png';
 import {
   PetIcon,
   FavoriteIcon,
@@ -24,56 +24,80 @@ import {
   AgeIcon,
   MaleIcon,
   FemaleIcon,
-} from '../SvgIcons.jsx';
+} from './SvgIcons.jsx';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import data from "./data.json"
 
-const NoticeCard = ({ ad }) => {
+
+
+const NoticeCategoryItem = ({ }) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isMale, setIsMale] = useState(false)
+
 
   useEffect(() => {
    
   }, []);
 
   const handleAddToFavorite = () => {
-    if (isLoggedIn) {
-      setIsFavorite(!isFavorite);
-    } else {
-      Notify.success('Please, sign in');
+    if(!isLoggedIn){
+      setIsFavorite(isFavorite)
+      Notify.failure("Please, sign in")
     }
+    else{
+      setIsFavorite(!isFavorite);
+    }
+      
+    
   };
+  const handleLearnMore = () => {
+  
+  
+  }
 
 
   return (
     <>
-      <Container>
-        <Item>
+    
+
+          <Container>
+        {data.map(data => {
+          return(
+          <Item key="id">
           <ImageBlock>
             <InGoodHands>In good hands</InGoodHands>
-            <Favorite>
-              <FavoriteIcon></FavoriteIcon>
+            <Favorite
+           onClick={() => handleAddToFavorite(data.id)}
+            >
+              <FavoriteIcon isFavorite={isFavorite}></FavoriteIcon>
             </Favorite>
             {isLoggedIn && (
           <Favorite
             onClick={handleAddToFavorite}
-            disabled={isFavorite}
+            
+            style={{
+              backgroundColor: isFavorite ? 'yellow' : 'yellow',
+            }}
           >
-            <FavoriteIcon></FavoriteIcon>
+            <FavoriteIcon isFavorite={isFavorite}></FavoriteIcon>
             {isFavorite ? "Видалити з обраних" : "Додати до обраних"}
           </Favorite>
         )}
             <InfoLocation>
               <LocationIcon></LocationIcon>
-              <p></p>
+              <p>{data.location}</p>
             </InfoLocation>
             <InfoAge>
               <AgeIcon></AgeIcon>
-              <p></p>
+              <p>{data.age} year</p>
             </InfoAge>
             <InfoPol>
-              <FemaleIcon></FemaleIcon>
-              <p></p>
+            {data.sex === 'Male' ? (
+                <MaleIcon></MaleIcon>
+              ) : data.sex === 'Female' ? (
+                <FemaleIcon></FemaleIcon>
+              ): null}
+              <p>{data.sex}</p>
             </InfoPol>
 
             <Image src={myImg}></Image>
@@ -82,15 +106,20 @@ const NoticeCard = ({ ad }) => {
             <Text>Сute dog looking for a home</Text>
           </TextDiv>
           <LearnMoreDiv>
-            <LearnMore>
+            <LearnMore onClick={handleLearnMore}>
               <TextMore>Learn more</TextMore>
               <PetIcon></PetIcon>
             </LearnMore>
           </LearnMoreDiv>
         </Item>
-      </Container>
+          )
+        })}
+          
+        </Container>
+      
     </>
+     
   );
 };
 
-export default NoticeCard;
+export default NoticeCategoryItem;
